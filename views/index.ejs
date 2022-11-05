@@ -1,0 +1,23 @@
+<%- include("header") -%>
+
+<div class="box" id="heading">
+  <h1>Componente</h1>
+</div>
+
+<div class="box">
+  <form class="item" action="/" method="post">
+    <input
+      type="text"
+      name="item"
+      placeholder="Search component"
+    />
+    <button type="submit" name="list">+</button>
+  </form>
+</div>
+<% components.forEach((item)=>{ %>
+<div>
+  <p><%= item %></p>
+</div>
+
+<% }) %> 
+<%- include("footer") -%>

@@ -1,0 +1,24 @@
+<%- include("header") -%>
+
+<div class="box" id="heading">
+  <h1>Documents</h1>
+</div>
+
+<div class="box">
+  <form class="item" action="/documents" enctype="multipart/form-data" method="post">
+    <input
+      type="file"
+      name="file"
+      placeholder="Add a pdf"
+    />
+    <button type="submit" name="documents">+</button>
+  </form>
+</div>
+<% files.forEach((file)=>{ %>
+<div class="iframe_thumb">
+  <!-- <a href="/uploads/<%=file%>"> <%= file %></a> -->
+  <iframe src="/uploads/<%=file%>" scrolling="no" width="10%" height="200" frameborder="0"></iframe>
+</div>
+
+<% }) %> 
+<%- include("footer") -%>
